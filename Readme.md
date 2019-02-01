@@ -5,9 +5,11 @@ Project NODE JS
 sudo apt-get install mongodb-server-core
 
 
-mkdir /home/saasmate/workspace/nodejs/mongodb
+sudo mkdir /opt/data_mongodb
+sudo chmod -R 777 /opt/data_mongodb/
 
-mongod --dbpath="/home/saasmate/workspace/nodejs/mongodb"
+
+mongod --dbpath="/opt/data_mongodb/"
 
 default port DB: 27017  (--port=27018)
 
@@ -47,3 +49,4 @@ For Start:
     if not:
         node index.js
 
+npm audit

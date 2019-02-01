@@ -1,0 +1,147 @@
+{
+	"variables": [],
+	"info": {
+		"name": "NodeJs",
+		"_postman_id": "168e089a-1816-c8f6-07c0-b618193403ef",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get sample api",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/reg/name?email=hari",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reg",
+						"name"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "hari",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "sampleApi",
+			"request": {
+				"url": "http://localhost:3000/reg/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":3,\n\t\"email\": \"rathish\",\n\t\"password\": \"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "simple get all",
+			"request": {
+				"url": "http://localhost:3000/reg/all",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/reg/all?id&email&password",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/reg/all?id&email&phone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reg",
+						"all"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "",
+							"equals": false,
+							"description": ""
+						},
+						{
+							"key": "email",
+							"value": "",
+							"equals": false,
+							"description": ""
+						},
+						{
+							"key": "phone",
+							"value": "",
+							"equals": false,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/reg/update/hari",
+			"request": {
+				"url": "http://localhost:3000/reg/update/hari",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"phone\": \"9650\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": " http://localhost:3000/reg/delete/prasath",
+			"request": {
+				"url": " http://localhost:3000/reg/delete/prasath",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

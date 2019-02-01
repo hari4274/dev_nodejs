@@ -11,7 +11,10 @@ var registerSchema = new Schema({
             password : {
                 type : String,
                 required : true 
-            }
+            },
+            phone: {
+            type: String
+        }
 },{
     timestamps : true 
 })
