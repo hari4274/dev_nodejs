@@ -6,6 +6,6 @@ module.exports.addNote = () => {
 }
 
 module.exports.addVals = (a, b) => {
-    console.log("Add function Called");
+    console.log("Add function Called.");
     return a + b;
 }
