@@ -6,43 +6,63 @@ app.use(express.static("public"));  /*  Adding Static Folder/Files */
 app.set('view engine', 'ejs');  /* Set default 'view engine' key or 'ejs' engine for views */
 
 app.get(['/', '/index'], (req, res) => {
-    res.render("index");
+    res.render("index", {
+        title: "Home"
+    });
 });
 
 app.get('/about', (req, res) => {
-    res.render("about");
+    res.render("about", {
+        title: "About Us"
+    });
 });
 
 app.get('/blog-detail', (req, res) => {
-    res.render("blog-detail");
+    res.render("blog-detail", {
+        title: "Blog Details"
+    });
 });
 
 app.get('/blog', (req, res) => {
-    res.render("blog");
+    res.render("blog", {
+        title: "Blog"
+    });
 });
 
 app.get('/cart', (req, res) => {
-    res.render("cart");
+    res.render("cart", {
+        title: "Cart"
+    });
 });
 
 app.get('/contact', (req, res) => {
-    res.render("contact");
+    res.render("contact", {
+        title: "Contact"
+    });
 });
 
 app.get('/home-02', (req, res) => {
-    res.render("home-02");
+    res.render("home-02", {
+        title: "Home-02"
+    });
 });
 
 app.get('/home-03', (req, res) => {
-    res.render("home-03");
+    res.render("home-03", {
+        title: "Home-03"
+    });
 });
 
 app.get('/product-detail', (req, res) => {
-    res.render("product-detail");
+    res.render("product-detail", {
+        title: "Product Detail"
+    });
 });
 
 app.get('/product', (req, res) => {
-    res.render("product");
+    res.render("product", {
+        "title": "Women's Collection"
+    });
 });
 
 // client side(json) redenring above are server side rendring
