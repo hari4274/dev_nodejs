@@ -40,6 +40,21 @@ class BlockChain {
         newBlock.hash = newBlock.calculateHash();
         this.chain.push(newBlock);
     }
+
+    isChainValid() {
+        for (var i = 1; i < this.chain.length; i++) {
+            const currentBlock = this.chain[i];
+            const previoudBlock = this.chain[i - 1];
+            
+            if(currentBlock.hash !== currentBlock.calculateHash()){
+                return false;
+            }
+            if(currentBlock.previousHash !== previoudBlock.hash) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 let hcoin = new BlockChain();
@@ -47,4 +62,10 @@ let hcoin = new BlockChain();
 hcoin.addBlock(new Block(1, '12/04/2019', {amount : 40}));
 hcoin.addBlock(new Block(2, '13/04/2019', {amount : 100}));
 
-console.log(JSON.stringify(hcoin, null, 4));
+// console.log(JSON.stringify(hcoin, null, 4));
+
+console.log("Is chain Valid : ", hcoin.isChainValid());
+
+hcoin.chain[1].data = { amount : 40000 }  // Hack atack check for block (test case)
+
+console.log("Is chain Valid : ", hcoin.isChainValid());
