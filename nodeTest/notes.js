@@ -5,6 +5,7 @@
     });
 }); */
 var createNote = (title, body) => {
+    debugger;
     console.log("Note Created ", title, body);
 }
 

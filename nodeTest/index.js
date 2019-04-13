@@ -10,8 +10,9 @@ console.log("Process : ", process.argv);
 console.log("Yargs : ", yargs.argv);
 var argv = yargs.argv;
 
+debugger;
 var command = argv._[0];
-console.log(command);
+debugger;
 
 if (command == 'list') {
     notes.getAllNotes();

@@ -14,4 +14,9 @@ To run with nodemon:
 
 # User input arrgs manager using "yarg"
 `npm install yargs --save`
+
+# Debugging in NodeJS
+`node --inspect-brk index.js create --title="New Debug" --body="Debug Content"`
+To View Debug in Chrome:
+`chrome://inspect`
     
