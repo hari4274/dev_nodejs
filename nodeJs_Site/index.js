@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static("public"));  /*  Adding Static Folder/Files */
 app.set('view engine', 'ejs');  /* Set default 'view engine' key or 'ejs' engine for views */
 
-app.get(['/', '/index'], (req, res) => {
+app.get(['/'], (req, res) => {
     res.render("index", {
         title: "Home"
     });
@@ -54,7 +54,7 @@ app.get('/home-03', (req, res) => {
 });
 
 app.get('/product-detail', (req, res) => {
-    res.render("product-detail", {
+        res.render("product-detail", {
         title: "Product Detail"
     });
 });
@@ -63,6 +63,31 @@ app.get('/product', (req, res) => {
     res.render("product", {
         "title": "Women's Collection"
     });
+});
+
+app.get('/product/:id', (req, res) => {
+    var id = req.params.id;
+    var data = [
+        {
+            id: 1,
+            productName: "Chudithar"
+        },
+        {
+            id: 2,
+            productName: "Salwar"
+        },
+    ]
+    var result;
+    data.forEach((product) => {
+        if (product.id == id) {
+            result = product;
+            return true;
+        }
+    })
+    console.log(result);
+    // res.render("product-detail", {
+    //     title: "Product"+ id
+    // });
 });
 
 // client side(json) redenring above are server side rendring
