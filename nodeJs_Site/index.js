@@ -45,7 +45,12 @@ app.get('/product', (req, res) => {
     res.render("product");
 });
 
-
+// client side(json) redenring above are server side rendring
+app.get('/api', (req, res) => {
+    res.json({
+        "name": "Hariprasath.B"
+    });
+});
 
 
 app.listen(3000);
