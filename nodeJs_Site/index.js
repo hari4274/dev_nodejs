@@ -53,19 +53,13 @@ app.get('/home-03', (req, res) => {
     });
 });
 
-app.get('/product-detail', (req, res) => {
-        res.render("product-detail", {
-        title: "Product Detail"
-    });
-});
-
 app.get('/product', (req, res) => {
     res.render("product", {
         "title": "Women's Collection"
     });
 });
 
-app.get('/product/:id', (req, res) => {
+app.get('/product-detail/:id', (req, res) => {
     var id = req.params.id;
     var data = [
         {
@@ -85,10 +79,12 @@ app.get('/product/:id', (req, res) => {
         }
     })
     console.log(result);
-    // res.render("product-detail", {
-    //     title: "Product"+ id
-    // });
+    res.render("product-detail", {
+        title: "Product Detail " + id,
+        product : result
+    });
 });
+
 
 // client side(json) redenring above are server side rendring
 app.get('/api', (req, res) => {

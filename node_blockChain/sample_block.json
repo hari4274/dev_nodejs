@@ -1,0 +1,29 @@
+{
+    "chain": [
+        {
+            "index": 0,
+            "timestamp": "01/01/2019",
+            "data": "Genesis",
+            "previousHash": 0,
+            "hash": ""
+        },
+        {
+            "index": 1,
+            "timestamp": "12/04/2019",
+            "data": {
+                "amount": 40
+            },
+            "previousHash": "",
+            "hash": "ed98a9cfb1ffb3eabdc53b6311a054a84c075723706bd3da11d8995d2cbc91a1"
+        },
+        {
+            "index": 2,
+            "timestamp": "13/04/2019",
+            "data": {
+                "amount": 100
+            },
+            "previousHash": "ed98a9cfb1ffb3eabdc53b6311a054a84c075723706bd3da11d8995d2cbc91a1",
+            "hash": "3d86d354b167f18d3458fee23d2789c354d17b5ae224fb826bfe7914a05713f1"
+        }
+    ]
+}
