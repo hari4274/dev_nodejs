@@ -2,21 +2,25 @@ console.log("Hello Node");
 const https = require("https");
 const fs = require("fs");
 const _ = require('lodash');
-const nodeSt = require('./node-start');
+const yargs = require('yargs');
+const notes = require('./notes');
 
 // node index.js remove
-console.log(process.argv);
-var command = process.argv[2];
+console.log("Process : ", process.argv);
+console.log("Yargs : ", yargs.argv);
+var argv = yargs.argv;
+
+var command = argv._[0];
 console.log(command);
 
 if (command == 'list') {
-    console.log("List all notes");
+    notes.getAllNotes();
 } else if (command == 'read') {
-    console.log("Read Note");
+    notes.readNote(argv.title);
 } else if (command == 'create') {
-    console.log("Note Created");
+    notes.createNote(argv.title, argv.body);
 } else if (command == 'remove') {
-    console.log("Note Removed");
+    notes.removeNote(argv.title);
 } else {
     console.log("command Not Found");
 }

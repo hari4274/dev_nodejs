@@ -11,4 +11,7 @@ Install Dependeny:
 `sudo npm install nodemon -g`
 To run with nodemon:    
     `nodemon index.js`
+
+# User input arrgs manager using "yarg"
+`npm install yargs --save`
     
