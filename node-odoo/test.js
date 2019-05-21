@@ -1,4 +1,4 @@
-const request = require('request')
+const request = require('request');
 
 REQUEST_AUTHENTICATE = "/web/session/authenticate";
 REQUEST_SEARCH_READ = "/web/dataset/search_read";
