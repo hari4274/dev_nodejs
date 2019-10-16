@@ -1,0 +1,23 @@
+{
+  "name": "nqr",
+  "version": "1.0.0",
+  "description": "NodeJS QR API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "qr",
+    "api"
+  ],
+  "author": "Hariprasath.B",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "qrcode": "^1.4.2"
+  },
+  "engines": {
+    "node": "10.x"
+  }
+}
